@@ -1,6 +1,7 @@
 import {FC} from "react";
-import type { AppProps } from 'next/app'
+import type {AppProps} from 'next/app'
 import {MainLayout} from "../core/layouts/MainLayout";
+import '../styles/index.scss';
 
 /**
  *
