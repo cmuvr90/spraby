@@ -1,1 +1,31 @@
 @import "normalize";
+@import "fonts";
+
+body {
+  font-family: 'Gilroy', sans-serif;
+}
+
+$primary: #9A53FF;
+$primaryDark: adjust-color($primary, $whiteness: -15%);
+//$primaryDarker: ;
+$primaryDarkest: #272738;
+
+$secondaryLightest: #FFF;
+//$secondaryLighter:;
+//$secondaryLight:;
+$secondary: #F1F2F6;
+$secondaryDark: #E6E6EB;
+$secondaryDarker: #9E9EAF;
+//$secondaryDarkest:;
+
+
+:root {
+  --primary: #{$primary};
+  --primary-dark: #{$primaryDark};
+  --primary-darkest: #{$primaryDarkest};
+
+  --secondary-lightest: #{$secondaryLightest};
+  --secondary: #{$secondary};
+  --secondary-dark: #{$secondaryDark};
+  --secondary-darker: #{$secondaryDarker};
+}

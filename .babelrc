@@ -4,10 +4,11 @@
   ],
   "plugins": [
     [
-      "styled-components",
+      "babel-plugin-styled-components",
       {
+        "displayName": false,
         "ssr": true,
-        "displayName": true,
+        "pure": true,
         "preprocess": false
       }
     ]

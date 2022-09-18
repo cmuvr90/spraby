@@ -2,6 +2,7 @@ import {FC} from "react";
 import type {AppProps} from 'next/app'
 import {MainLayout} from "../core/layouts/MainLayout";
 import '../styles/index.scss';
+import Head from 'next/head';
 
 /**
  *
@@ -11,7 +12,12 @@ import '../styles/index.scss';
  */
 const App: FC = ({Component, pageProps}: AppProps) => {
     const Layout = MainLayout(Component);
-    return <Layout {...pageProps}/>;
+    return <>
+        <Head>
+            <title>app</title>
+        </Head>
+        <Layout {...pageProps}/>
+    </>
 }
 
 export default App;
