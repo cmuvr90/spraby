@@ -3,6 +3,7 @@ import React, {FC} from "react";
 import bigBanImg from "../../../public/big-ben.jpg";
 import {Splide, SplideSlide} from "@splidejs/react-splide";
 import {ProductCart} from "../../../components/ProductCart";
+import {Grid} from "../../../components/Grid";
 
 export const HomePage: FC = (props) => {
 
@@ -120,5 +121,19 @@ export const HomePage: FC = (props) => {
             alt={'big ban'}
             placeholder={'blur'}
         />
+        <Grid>
+            {
+                products.map(product => (
+                    <ProductCart
+                        image={product.image}
+                        title={product.title}
+                        description={product.description}
+                        price={product.price}
+                        discountPrice={product.discountPrice}
+                        discountPercent={product.discountPercent}
+                    />
+                ))
+            }
+        </Grid>
     </div>
 }
