@@ -11,7 +11,7 @@ export const Collections: FC = (props) => {
 
     const products = [
         {
-            // image: 'https://avatars.mds.yandex.net/i?id=43131c522436b4d49d2229d770e7d46f-4766550-images-thumbs&n=13&exp=1',
+            image: 'https://avatars.mds.yandex.net/i?id=43131c522436b4d49d2229d770e7d46f-4766550-images-thumbs&n=13&exp=1',
             title: 'Название товара',
             description: 'Название продавца',
             price: '220.00',
