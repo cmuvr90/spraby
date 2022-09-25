@@ -2,6 +2,7 @@ import React from 'react';
 import style from '../../styles/conponents/Menu.module.scss'
 import {FC} from "react";
 import {MenuWrapper} from "./Style.styles";
+import Link from "next/link";
 
 export const Menu: FC = () => {
 
@@ -13,11 +14,11 @@ export const Menu: FC = () => {
         },
         {
             title: 'Аксессуары',
-            url: '/',
+            url: '/collections/accessories',
             children: [
                 {
                     title: 'Украшения',
-                    url: '/',
+                    url: '/collections/decorating',
                     children: [
                         {
                             title: 'Бини и зимние шапки',
@@ -791,7 +792,9 @@ export const Menu: FC = () => {
             {
                 items.map(i => {
                     return <li>
-                        <span>{i.title}</span>
+                        <Link href={i.url}>
+                            <a>{i.title}</a>
+                        </Link>
                         {renderItems(i.children)}
                     </li>
                 })

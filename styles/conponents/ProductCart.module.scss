@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 20px;
+
+  .ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+    & > * {
+      margin-left: 20px;
+      padding: 0;
+    }
+  }
+}
+

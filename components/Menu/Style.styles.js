@@ -4,10 +4,12 @@ export const MenuWrapper = styled.nav`
 
   padding: 0;
 
-  span {
+  a {
     cursor: pointer;
     font-size: 1rem;
     line-height: 1.714;
+    color: var(--primary-darkest);
+    text-decoration: none;
   }
 
   li {
@@ -25,7 +27,7 @@ export const MenuWrapper = styled.nav`
 
     & > li {
 
-      & > span {
+      & > a {
         position: relative;
         display: block;
         color: var(--primary-darkest);
@@ -48,7 +50,7 @@ export const MenuWrapper = styled.nav`
 
       &:hover {
 
-        & > span {
+        & > a {
           &:before {
             opacity: 1;
           }
@@ -82,7 +84,7 @@ export const MenuWrapper = styled.nav`
         & > li {
           position: relative;
 
-          & > span {
+          & > a {
             position: relative;
             display: block;
             width: 30%;
@@ -102,7 +104,7 @@ export const MenuWrapper = styled.nav`
 
           &:hover {
 
-            & > span {
+            & > a {
               color: var(--primary);
 
               &:before {
@@ -131,7 +133,7 @@ export const MenuWrapper = styled.nav`
 
             & > li {
               &:hover {
-                span {
+                a {
                   color: var(--primary);
                 }
               }

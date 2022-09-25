@@ -29,3 +29,44 @@ $secondaryDarker: #9E9EAF;
   --secondary-dark: #{$secondaryDark};
   --secondary-darker: #{$secondaryDarker};
 }
+
+body {
+  animation: show 2s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.splide__arrows {
+
+  & .splide__arrow {
+
+    width: 3.429em;
+    height: 3.429em;
+    background-color: var(--secondary-lightest);
+    opacity: 1;
+
+    &:hover:not(:disabled) {
+      opacity: 1;
+    }
+
+    top: calc(50% - 1.714em);
+
+    &--prev {
+      left: -1.714em;
+    }
+
+    &--next {
+      right: -1.714em;
+    }
+  }
+}

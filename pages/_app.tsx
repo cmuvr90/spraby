@@ -1,7 +1,8 @@
-import {FC} from "react";
+import React, {FC} from "react";
 import type {AppProps} from 'next/app'
 import {MainLayout} from "../core/layouts/MainLayout";
 import '../styles/index.scss';
+import '@splidejs/react-splide/css';
 import Head from 'next/head';
 
 /**
@@ -12,12 +13,12 @@ import Head from 'next/head';
  */
 const App: FC = ({Component, pageProps}: AppProps) => {
     const Layout = MainLayout(Component);
-    return <>
+    return <React.StrictMode>
         <Head>
             <title>app</title>
         </Head>
         <Layout {...pageProps}/>
-    </>
+    </React.StrictMode>
 }
 
 export default App;
