@@ -49,6 +49,7 @@ const spacing = ({spacing}) => {
 
 export const StackWrapper = styled.div`
   display: flex;
+  flex-wrap: ${({wrap}) => wrap ? 'wrap' : 'no-wrap'};
   ${distribution}
   ${spacing}
   ${alignment}

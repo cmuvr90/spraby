@@ -1,9 +1,9 @@
-import Image from "next/image";
 import React, {FC} from "react";
-import bigBanImg from "../../../public/big-ben.jpg";
 import {Splide, SplideSlide} from "@splidejs/react-splide";
 import {ProductCart} from "../../../components/ProductCart";
 import {Grid} from "../../../components/Grid";
+import Stack from "../../../components/Stack";
+import {MainWrapper} from "../../../components/MainWrapper";
 
 export const HomePage: FC = (props) => {
 
@@ -84,43 +84,38 @@ export const HomePage: FC = (props) => {
         },
     ]
 
-
-    return <div>
-        <Splide
-            options={{
-                label: 'My Gallery',
-                type: 'loop',
-                perPage: 4,
-                speed: 400,
-                gap: 32,
-                pagination: false,
-                arrows: true
-            }}
-            aria-label="My Favorite Images"
-        >
-            {
-                products.map(product => {
-                    return (
-                        <SplideSlide>
-                            <ProductCart
-                                image={product.image}
-                                title={product.title}
-                                description={product.description}
-                                price={product.price}
-                                discountPrice={product.discountPrice}
-                                discountPercent={product.discountPercent}
-                            />
-                        </SplideSlide>
-                    )
-                })
-            }
-        </Splide>
-        <Image
-            layout="responsive"
-            src={bigBanImg}
-            alt={'big ban'}
-            placeholder={'blur'}
-        />
+    return <Stack wrap>
+        <MainWrapper>
+            <Splide
+                options={{
+                    label: 'My Gallery',
+                    type: 'loop',
+                    perPage: 4,
+                    speed: 400,
+                    gap: 32,
+                    pagination: false,
+                    arrows: true
+                }}
+                aria-label="My Favorite Images"
+            >
+                {
+                    products.map(product => {
+                        return (
+                            <SplideSlide>
+                                <ProductCart
+                                    image={product.image}
+                                    title={product.title}
+                                    description={product.description}
+                                    price={product.price}
+                                    discountPrice={product.discountPrice}
+                                    discountPercent={product.discountPercent}
+                                />
+                            </SplideSlide>
+                        )
+                    })
+                }
+            </Splide>
+        </MainWrapper>
         <Grid>
             {
                 products.map(product => (
@@ -135,5 +130,5 @@ export const HomePage: FC = (props) => {
                 ))
             }
         </Grid>
-    </div>
+    </Stack>
 }

@@ -68,7 +68,7 @@ export const MenuWrapper = styled.nav`
       & > ul {
         background: var(--secondary-lightest);
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         display: grid;
         grid-template-columns: 1fr;
         gap: 12px;        

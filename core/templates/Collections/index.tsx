@@ -1,8 +1,8 @@
 import React, {FC} from "react";
-import {Splide, SplideSlide} from '@splidejs/react-splide';
 import {ProductCart} from "../../../components/ProductCart";
 import {Grid} from "../../../components/Grid";
 import Layout from "../../../components/Layout";
+import {Filter} from "../../../components/Filter";
 
 /**
  *
@@ -182,10 +182,111 @@ export const Collections: FC = (props) => {
         }
     ]
 
+    const filter = [
+        {
+            title: 'Специальные предложения',
+            type: 'checkbox',
+            key: 'offers',
+            values: [
+                {
+                    title: 'Бесплатная доставка',
+                    value: 'free_shipping'
+                },
+                {
+                    title: 'Со скидкой',
+                    value: 'with_discount'
+                }
+            ]
+        },
+        {
+            title: 'Доставка',
+            type: 'checkbox',
+            key: 'shipping',
+            values: [
+                {
+                    title: '1 рабочий день',
+                    value: '1_day'
+                },
+                {
+                    title: '1-3 рабочих дня',
+                    value: '1-3_day'
+                },
+                {
+                    title: 'в течении 7 рабочих дней',
+                    value: '7_day'
+                }
+            ]
+        },
+        {
+            title: 'Цена',
+            type: 'radio',
+            key: 'price',
+            values: [
+                {
+                    title: 'Любая цена',
+                    value: 'any'
+                },
+                {
+                    title: 'Дешевле 25 BYN',
+                    value: '0_25'
+                },
+                {
+                    title: '25 - 50 BYN',
+                    value: '25_50'
+                },
+                {
+                    title: '50 - 100 BYN',
+                    value: '50_100'
+                },
+                {
+                    title: 'Дороже 100 BYN',
+                    value: 'more_100'
+                }
+            ]
+        },
+        {
+            title: 'Цвет',
+            type: 'checkbox',
+            key: 'color',
+            values: [
+                {
+                    title: 'Беж',
+                    value: 'beg'
+                },
+                {
+                    title: 'Черный',
+                    value: 'black'
+                },
+                {
+                    title: 'Синий',
+                    value: 'black'
+                },
+                {
+                    title: 'Бронза',
+                    value: 'bronz'
+                },
+                {
+                    title: 'Корничевый',
+                    value: 'green'
+                },
+                {
+                    title: 'Крассный',
+                    value: 'red'
+                },
+                {
+                    title: 'Желтый',
+                    value: 'yellow'
+                }
+            ]
+        }
+    ]
+
 
     return <>
         <Layout columns={[2, 10]}>
-            <Layout.Section/>
+            <Layout.Section>
+                <Filter filter={filter}/>
+            </Layout.Section>
             <Layout.Section>
                 <Grid>
                     {
