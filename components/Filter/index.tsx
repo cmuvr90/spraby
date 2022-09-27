@@ -1,5 +1,7 @@
 import React, {FC} from "react";
 import {FilterWrapper, FilterItem} from "./Style.styles";
+import {Checkbox} from "../Checkbox";
+import {Radio} from "../Radio";
 
 interface PropsInterface {
     filter?: {
@@ -28,10 +30,12 @@ export const Filter: FC<PropsInterface> = ({filter = []}) => {
                             {
                                 i.values.map(value => (
                                     <li>
-                                        <label>
-                                            <input type={i.type} name={i.key}/>
-                                            <span>{value.title}</span>
-                                        </label>
+                                        {
+                                            i.type === 'checkbox' && <Checkbox label={value.title}/>
+                                        }
+                                        {
+                                            i.type === 'radio' && <Radio label={value.title} name={i.key}/>
+                                        }
                                     </li>
                                 ))
                             }

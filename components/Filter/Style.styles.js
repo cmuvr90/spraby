@@ -20,10 +20,6 @@ export const FilterItem = styled.div`
 
     li {
       margin: 0 0 12px 0;
-
-      input {
-        margin-right: 10px;
-      }
     }
   }
 
