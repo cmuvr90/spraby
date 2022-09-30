@@ -32,6 +32,7 @@ $secondaryDarker: #9E9EAF;
 
 body {
   animation: show 2s;
+  min-height: 100%;
 }
 
 @keyframes show {
