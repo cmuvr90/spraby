@@ -41,6 +41,12 @@ const alignment = ({alignment}) => {
 
 const spacing = ({spacing}) => {
   return css`
+    margin-bottom: -${spacing};
+    
+    & > * {
+      margin-bottom:  ${spacing};
+    }
+    
     & > *:not(:last-child) {
       margin-right: ${spacing};
     }
