@@ -13,14 +13,10 @@ interface PropsInterface {
  *
  */
 export default class Stack extends Component<PropsInterface> {
-    static Item = ({children, distribution = 'leading', spacing = '0', alignment = 'center'}) =>
-        <StackWrapper
-            distribution={distribution}
-            spacing={spacing}
-            alignment={alignment}
-        >
+    static Item = ({children}) =>
+        <div>
             {children}
-        </StackWrapper>
+        </div>
 
     render() {
         const {children, distribution = 'leading', spacing = '0', alignment = 'center', wrap = false} = this.props;

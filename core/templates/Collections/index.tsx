@@ -305,8 +305,7 @@ export const Collections: FC = (props) => {
         }
     ]
 
-
-    return <Layout columns={[2, 10]}>
+    return <Layout columns={['2', '8']}>
         <Layout.Section>
             <Filter filter={filter}/>
         </Layout.Section>

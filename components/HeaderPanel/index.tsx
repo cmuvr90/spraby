@@ -29,11 +29,12 @@ export const HeaderPanel: FC<PropsInterface> = ({}) => {
                 <Link>Регистрация</Link>
                 <Link>Войти</Link>
             </ButtonGroup>
-            <Stack spacing={'25px'}>
-                <HeartIcon/>
-                <CartIcon/>
-            </Stack>
+            <Stack.Item>
+                <Stack spacing={'25px'}>
+                    <HeartIcon/>
+                    <CartIcon/>
+                </Stack>
+            </Stack.Item>
         </Stack>
-
     </HeaderPanelWrapper>
 }

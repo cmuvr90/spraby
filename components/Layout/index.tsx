@@ -2,8 +2,9 @@ import React, {Component, FC, ReactNode} from "react";
 import {LayoutWrapper, SectionWrapper} from "./Style.styles";
 
 interface PropsInterface {
-    columns?: number[];
+    columns?: string[] | number[];
     gap?: string;
+    unit?: string,
     children?: ReactNode | [ReactNode],
 }
 
@@ -17,9 +18,8 @@ export default class Layout extends Component<PropsInterface> {
         </SectionWrapper>
 
     render() {
-        const {gap = '32px', children, columns = [1]} = this.props;
-
-        return <LayoutWrapper gap={gap} columns={columns}>
+        const {gap = '32px', children, columns = [1], unit = 'fr'} = this.props;
+        return <LayoutWrapper gap={gap} columns={columns} unit={unit}>
             {children}
         </LayoutWrapper>
     }
