@@ -7,6 +7,8 @@ interface PropsInterface {
     children?: ReactNode | [ReactNode],
     spacing?: string
     wrap?: boolean
+    vertical?: boolean
+    full?: boolean
 }
 
 /**
@@ -19,10 +21,21 @@ export default class Stack extends Component<PropsInterface> {
         </div>
 
     render() {
-        const {children, distribution = 'leading', spacing = '0', alignment = 'center', wrap = false} = this.props;
+        const {
+            children,
+            distribution = 'leading',
+            spacing = '0',
+            alignment = 'center',
+            wrap = false,
+            vertical = false,
+            full = false
+        } = this.props;
 
         return (
-            <StackWrapper distribution={distribution} spacing={spacing} alignment={alignment} wrap={wrap}>
+            <StackWrapper className={'stack'} distribution={distribution} spacing={spacing} alignment={alignment}
+                          wrap={wrap.toString()}
+                          vertical={vertical}
+                          full={full}>
                 {children}
             </StackWrapper>
         )

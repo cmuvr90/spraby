@@ -786,12 +786,11 @@ export const Menu: FC = () => {
         }
     ]
 
-
     const renderItems = items => {
         return items?.length ? <ul>
             {
                 items.map(i => {
-                    return <li>
+                    return <li key={`${i}_${i.title}`}>
                         <Link href={i.url}>
                             <a>{i.title}</a>
                         </Link>

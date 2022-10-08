@@ -1,11 +1,11 @@
 import React, {FC} from "react";
-import {Header1, Header2, Header3, Header4, Header5, Header6, Paragraph, Wrapper} from "./Style.styles";
+import {Header1, Header2, Header3, Header4, Header5, Header6, Paragraph, Wrapper, BLockWrapper} from "./Style.styles";
 
 
 interface PropsInterface {
-    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span',
+    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div',
     children?: any,
-    size?: string,
+    size?: string | number,
     color?: string
 }
 
@@ -36,5 +36,7 @@ export const Text: FC<PropsInterface> = ({
             return <Paragraph size={size} color={color}>{children}</Paragraph>
         case "span":
             return <Wrapper size={size} color={color}>{children}</Wrapper>
+        case "div":
+            return <BLockWrapper size={size} color={color}>{children}</BLockWrapper>
     }
 }
