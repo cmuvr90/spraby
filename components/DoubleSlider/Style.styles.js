@@ -36,7 +36,7 @@ export const SliderWrapper = styled.div`
         left: 50%;
         transform: translateX(-50%);
         width: 98%;
-        height: 4px;
+        height: 3px;
         border-radius: 4px;
         background: var(--primary);
         opacity: 0;
