@@ -6,6 +6,7 @@ import Stack from "../../../components/Stack";
 import {Badge} from "../../../components/Badge";
 import {Accordion} from "../../../components/Accordion";
 import {Button} from "../../../components/Button";
+import {Selector} from "../../../components/Selector";
 
 
 interface Product {
@@ -81,6 +82,60 @@ export const Product: FC = () => {
                     <Accordion state={'open'} items={[
                         {key: 'description', title: 'Дополнительная информация ', content: product.description},
                     ]}/>
+                    <Stack  spacing={'24px'} vertical full>
+                        <Selector
+                            title={'Название параметра'}
+                            items={[
+                                {
+                                    label: 'Выберите параметр',
+                                    value: 'color'
+                                },
+                                {
+                                    label: 'Выберите параметр 1',
+                                    value: 'color2'
+                                },
+                                {
+                                    label: 'Выберите параметр 2',
+                                    value: 'color2'
+                                }
+                            ]}
+                        />
+                        <Selector
+                            title={'Название параметра'}
+                            items={[
+                                {
+                                    label: 'Выберите параметр',
+                                    value: 'color'
+                                },
+                                {
+                                    label: 'Выберите параметр 1',
+                                    value: 'color2'
+                                },
+                                {
+                                    label: 'Выберите параметр 2',
+                                    value: 'color2'
+                                }
+                            ]}
+                        />
+                        <Selector
+                            title={'Название параметра'}
+                            items={[
+                                {
+                                    label: 'Выберите параметр',
+                                    value: 'color'
+                                },
+                                {
+                                    label: 'Выберите параметр 1',
+                                    value: 'color2'
+                                },
+                                {
+                                    label: 'Выберите параметр 2',
+                                    value: 'color2'
+                                }
+                            ]}
+                        />
+                    </Stack>
+
                 </Stack>
             </Layout.Section>
         </Layout>
